@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-          # node-node-version: 22
+          # node-node-version: lts/*
           cache: npm
 
       - name: Install dependencies
