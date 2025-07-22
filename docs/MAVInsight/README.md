@@ -58,9 +58,9 @@ To clone the UROC ROS node, copy and paste the following command block below int
 ```bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-git clone https://github.com/cdenihan/UMD-UROC-ROS2-Python-Package
-mv UMD-UROC-ROS2-Python-Package py_uroc
-cd py_uroc
+git clone https://github.com/UMD-UROC/ROS2-Data-Visualizer-Package
+mv ROS2-Data-Visualizer-Package umd_uroc_data_visualizer
+cd umd_uroc_data_visualizer
 git config core.hooksPath .githooks
 cd ..
 cd ..
@@ -197,7 +197,7 @@ Depending on your needs, you may use either Foxglove or PlotJuggler.
 To run Foxglove, use the following command in a fourth terminal:
 
 ```bash
-cd ~/ros2_ws && colcon build --packages-select py_uroc && source install/local_setup.bash && ros2 launch py_uroc visualize.py
+cd ~/ros2_ws && colcon build --packages-select umd_uroc_data_visualizer && source install/local_setup.bash && ros2 launch umd_uroc_data_visualizer visualize.py
 ```
 
 And in a fifth terminal:
@@ -252,7 +252,7 @@ There isn't really an "installation" for this script. You are just downloading i
 
 ```bash
 cd ~
-curl -O https://raw.githubusercontent.com/cdenihan/MAVInsight/refs/heads/production/mavinsight.py
+curl -O https://raw.githubusercontent.com/UMD-UROC/MAVInsight/refs/heads/main/mavinsight.py
 ```
 
 Then we can run the script as long as we are in our home directory and call it like demonstrated above.

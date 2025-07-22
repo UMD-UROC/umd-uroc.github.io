@@ -1,0 +1,8 @@
+{
+  "label": "UROC Docs",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Setup guide for UROC documentation site"
+  }
+}
