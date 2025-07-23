@@ -5,9 +5,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'UMD UROC Documentation',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: 'UMD UROC FOSS',
+  tagline: '#FEARLESSFLIGHT',
+  favicon: 'https://uroc.umd.edu/sites/uroc.umd.edu/files/favicon_0.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -18,7 +18,7 @@ const config: Config = {
   url: 'https://umd-uroc.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -47,8 +47,8 @@ const config: Config = {
           routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl:
+              'https://github.com/umd-uroc/umd-uroc.github.io/tree/develop/',
         },
         blog: {
           showReadingTime: true,
@@ -58,8 +58,8 @@ const config: Config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-            //editUrl:
-            //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl:
+              'https://github.com/umd-uroc/umd-uroc.github.io/tree/develop/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -76,21 +76,22 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'UMD UROC Docs',
+      // title: 'UMD UROC FOSS',
+      title: '',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'https://uroc.umd.edu/sites/uroc.umd.edu/themes/engrcenter_sub_uas/images/logo-uroc.svg',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Projects',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/umd-uroc/docs',
+          href: 'https://github.com/umd-uroc/umd-uroc.github.io',
           label: 'GitHub',
           position: 'right',
         },
@@ -100,21 +101,37 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Projects',
           items: [
             {
-              label: 'Tutorial',
-                to: 'intro',
+              label: 'MAVInsight',
+              to: 'MAVInsight',
+            },
+            {
+              label: 'SSH Operations Hub',
+              to: 'SSH Operations Hub',
             },
           ],
         },
         {
           title: 'Community',
           items: [
-            // {
-            //   label: 'X',
-            //   href: 'https://x.com/docusaurus',
-            // },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/company/umd-uroc/',
+            },
+            {
+              label: 'Facebook',
+              href: 'https://www.facebook.com/UMDUROC/',
+            },
+            {
+              label: 'Instagram',
+              href: 'https://www.instagram.com/umd_uroc/',
+            },
+            {
+              label: 'X',
+              href: 'https://x.com/UMD_UROC',
+            },
           ],
         },
         {
@@ -126,7 +143,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/umd-uroc/docs',
+              href: 'https://github.com/umd-uroc/',
             },
           ],
         },

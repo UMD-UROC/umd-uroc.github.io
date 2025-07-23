@@ -9,24 +9,28 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
+    const {siteConfig} = useDocusaurusContext();
+    return (
+        <header className={clsx('hero hero--primary', styles.heroBanner)} style={{
+            backgroundImage: 'url("https://uroc.umd.edu/sites/uroc.umd.edu/files/DSC_0667_0.jpg")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+        }}>
+            <div className="container">
+                <Heading as="h1" className="hero__title" style={{color: 'white'}}>
+                    {siteConfig.title}
+                </Heading>
+                <p className="hero__subtitle" style={{color: 'white'}}>{siteConfig.tagline}</p>
+                <div className={styles.buttons}>
+                    <Link
+                        className="button button--secondary button--lg"
+                        to="https://uroc.umd.edu">
+                        Learn More About UROC
+                    </Link>
+                </div>
+            </div>
+        </header>
+    );
 }
 
 export default function Home(): ReactNode {
