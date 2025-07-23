@@ -22,7 +22,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'umd-uroc', // Usually your GitHub org/user name.
+  organizationName: 'umd-uroc', // Usually your GitHub org/username.
   projectName: 'umd-uroc.github.io', // Usually your repo name.
   // deploymentBranch: 'gh-pages',
   trailingSlash: false,
@@ -50,21 +50,25 @@ const config: Config = {
           editUrl:
               'https://github.com/umd-uroc/umd-uroc.github.io/tree/develop/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-              'https://github.com/umd-uroc/umd-uroc.github.io/tree/develop/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
+
+        // Everything commented out below disables the blog. To enable it remove the "blog:false," line and uncomment out everything below. Then go to the navbar and footer and uncomment out the section that adds the blog button to the navbar
+
+        // blog: {
+        //   showReadingTime: true,
+        //   feedOptions: {
+        //     type: ['rss', 'atom'],
+        //     xslt: true,
+        //   },
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //       'https://github.com/umd-uroc/umd-uroc.github.io/tree/develop/',
+        //   // Useful options to enforce blogging best practices
+        //   onInlineTags: 'warn',
+        //   onInlineAuthors: 'warn',
+        //   onUntruncatedBlogPosts: 'warn',
+        // },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -94,7 +98,7 @@ const config: Config = {
           position: 'left',
           label: 'Projects',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        // This disables blog as an option on the navbar {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/umd-uroc/umd-uroc.github.io',
           label: 'GitHub',
@@ -142,10 +146,11 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
+            // This removes the blog button from the footer
+            // {
+            //   label: 'Blog',
+            //   to: '/blog',
+            // },
             {
               label: 'GitHub',
               href: 'https://github.com/umd-uroc/',
