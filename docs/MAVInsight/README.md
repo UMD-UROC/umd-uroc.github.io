@@ -1,11 +1,9 @@
 ---
 title: MAVInsight
-description: Brief description of the MAVInsight project 
+description: Brief description of the MAVInsight project
 ---
 
 # MAVInsight
 
-## History
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum
-tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+## Project Objective
+Create a tool that enables live data visualization from a MAVLink stream, with capabilities that can be easily extended beyond those offered by QGroundControl.
