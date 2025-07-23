@@ -31,7 +31,8 @@ const config: Config = {
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
+  // useful metadata like HTML lang.
+  // For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
@@ -52,7 +53,10 @@ const config: Config = {
         },
         blog: false,
 
-        // Everything commented out below disables the blog. To enable it remove the "blog:false," line and uncomment out everything below. Then go to the navbar and footer and uncomment out the section that adds the blog button to the navbar
+        // Everything commented out below disables the blog.
+        // To enable it, remove the "blog:false," line and uncomment out everything below.
+        // Then go to the navbar and footer
+        // and uncomment out the section that adds the blog button to the navbar
 
         // blog: {
         //   showReadingTime: true,
@@ -77,7 +81,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+    // Replace it with your project's social card
     // image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       defaultMode: 'dark',
@@ -88,7 +92,7 @@ const config: Config = {
       // title: 'UMD UROC FOSS',
       title: '',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'UMD UROC Logo',
         src: 'https://uroc.umd.edu/sites/uroc.umd.edu/themes/engrcenter_sub_uas/images/logo-uroc.svg',
       },
       items: [
@@ -126,10 +130,6 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'LinkedIn',
-              href: 'https://www.linkedin.com/company/umd-uroc/',
-            },
-            {
               label: 'Facebook',
               href: 'https://www.facebook.com/UMDUROC/',
             },
@@ -140,6 +140,10 @@ const config: Config = {
             {
               label: 'X',
               href: 'https://x.com/UMD_UROC',
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/company/umd-uroc/',
             },
           ],
         },
@@ -158,7 +162,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} UMD UROC. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} UMD UROC. Built with <a href="https://docusaurus.io/">Docusaurus</a>.`,
     },
     prism: {
       theme: prismThemes.github,
