@@ -4,33 +4,114 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* University of Maryland Official Colors */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* UMD Red as primary */
+  --ifm-color-primary: #e21833;
+  --ifm-color-primary-dark: #cc1529;
+  --ifm-color-primary-darker: #c01426;
+  --ifm-color-primary-darkest: #9e101f;
+  --ifm-color-primary-light: #e7384d;
+  --ifm-color-primary-lighter: #ea4556;
+  --ifm-color-primary-lightest: #f06273;
+
+  /* UMD Gold as accent */
+  --ifm-color-secondary: #ffd520;
+  --ifm-color-secondary-dark: #ffcd00;
+  --ifm-color-secondary-darker: #e6b800;
+  --ifm-color-secondary-darkest: #cc9900;
+  --ifm-color-secondary-light: #ffdd40;
+  --ifm-color-secondary-lighter: #ffe55c;
+  --ifm-color-secondary-lightest: #ffed78;
+
+  /* UMD Black */
+  --umd-black: #000000;
+  /* UMD White */
+  --umd-white: #ffffff;
+
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(226, 24, 51, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* Force dark mode styles globally */
+:root,
+html[data-theme='dark'] {
+  /* Override with dark mode colors */
+  --ifm-color-primary: #ff4d6b;
+  --ifm-color-primary-dark: #ff3352;
+  --ifm-color-primary-darker: #ff2645;
+  --ifm-color-primary-darkest: #e6001a;
+  --ifm-color-primary-light: #ff6784;
+  --ifm-color-primary-lighter: #ff7491;
+  --ifm-color-primary-lightest: #ff95ab;
+
+  --ifm-color-secondary: #ffd520;
+  --ifm-color-secondary-dark: #ffcd00;
+  --ifm-color-secondary-darker: #e6b800;
+  --ifm-color-secondary-darkest: #cc9900;
+  --ifm-color-secondary-light: #ffdd40;
+  --ifm-color-secondary-lighter: #ffe55c;
+  --ifm-color-secondary-lightest: #ffed78;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 77, 107, 0.3);
+
+  /* Dark navbar styling */
+  --ifm-navbar-background-color: #e21833;
+  --ifm-navbar-link-color: var(--umd-white);
+  --ifm-navbar-link-hover-color: var(--umd-black);
+
+  /* Dark mode background and text colors */
+  --ifm-background-color: #1b1b1d;
+  --ifm-background-surface-color: #242526;
+  --ifm-color-content: #e3e3e3;
+  --ifm-color-content-secondary: rgba(255, 255, 255, 0.6);
 }
 
 @layer docusaurus.infima {
   .navbar__brand {
     margin-right: unset;
+  }
+
+  /* Style navigation links with UMD colors */
+  .navbar__link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .navbar__link:hover {
+    color: var(--ifm-color-primary) !important;
+  }
+
+  /* Footer styling with UMD colors */
+  .footer {
+    background-color: var(--umd-black);
+    color: var(--umd-white);
+  }
+
+  .footer__link-item:hover {
+    color: var(--ifm-color-secondary);
+  }
+
+  /* Button styling with UMD colors */
+  .button--primary {
+    background-color: var(--ifm-color-primary);
+    border-color: var(--ifm-color-primary);
+  }
+
+  .button--primary:hover {
+    background-color: var(--ifm-color-primary-dark);
+    border-color: var(--ifm-color-primary-dark);
+  }
+
+  .button--secondary {
+    background-color: var(--ifm-color-secondary);
+    color: var(--umd-black);
+    border-color: var(--ifm-color-secondary);
+  }
+
+  .button--secondary:hover {
+    background-color: var(--ifm-color-secondary-dark);
+    border-color: var(--ifm-color-secondary-dark);
+    color: var(--umd-black);
   }
 }
