@@ -2,9 +2,7 @@ name: CD - Deploy Docusaurus to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: [main, master]
   workflow_dispatch:
 
 permissions:
@@ -31,21 +29,19 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'pnpm'
+          node-version: "20"
+          cache: "pnpm"
 
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      - name: Setup pnpm cache
+      # Build cache (Docusaurus/webpack/babel)
+      - name: Cache build artifacts
         uses: actions/cache@v4
         with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: |
+            .docusaurus
+            node_modules/.cache
+          key: ${{ runner.os }}-docusaurus-${{ hashFiles('pnpm-lock.yaml', 'package.json', 'docusaurus.config.*', 'babel.config.*', 'tsconfig.json', 'src/**', 'static/**') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+            ${{ runner.os }}-docusaurus-
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
