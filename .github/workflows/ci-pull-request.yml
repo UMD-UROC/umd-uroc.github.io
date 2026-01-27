@@ -13,14 +13,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-          cache: "pnpm"
+      - name: Setup Node.js
+        uses: oven-sh/setup-bun@v2
 
       - name: Cache build artifacts
         uses: actions/cache@v4
@@ -28,12 +22,12 @@ jobs:
           path: |
             .docusaurus
             node_modules/.cache
-          key: ${{ runner.os }}-docusaurus-${{ hashFiles('pnpm-lock.yaml', 'package.json', 'docusaurus.config.*', 'babel.config.*', 'tsconfig.json', 'src/**', 'static/**') }}
+          key: ${{ runner.os }}-docusaurus-${{ hashFiles('bun.lock', 'package.json', 'docusaurus.config.*', 'babel.config.*', 'tsconfig.json', 'src/**', 'static/**') }}
           restore-keys: |
             ${{ runner.os }}-docusaurus-
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: Test build website
-        run: pnpm build
+        run: bun build

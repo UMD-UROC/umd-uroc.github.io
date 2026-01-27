@@ -21,16 +21,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-
       - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "pnpm"
+        uses: oven-sh/setup-bun@v2
 
       # Build cache (Docusaurus/webpack/babel)
       - name: Cache build artifacts
@@ -39,15 +31,15 @@ jobs:
           path: |
             .docusaurus
             node_modules/.cache
-          key: ${{ runner.os }}-docusaurus-${{ hashFiles('pnpm-lock.yaml', 'package.json', 'docusaurus.config.*', 'babel.config.*', 'tsconfig.json', 'src/**', 'static/**') }}
+          key: ${{ runner.os }}-docusaurus-${{ hashFiles('bun.lock', 'package.json', 'docusaurus.config.*', 'babel.config.*', 'tsconfig.json', 'src/**', 'static/**') }}
           restore-keys: |
             ${{ runner.os }}-docusaurus-
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: Build
-        run: pnpm build
+        run: bun build
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
