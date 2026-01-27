@@ -8,6 +8,7 @@ sidebar_position: 2
 This document outlines the development standards and best practices followed at UROC. These guidelines ensure consistency and maintainability across our codebase.
 
 ## Table of Contents
+
 - [Version Control](#version-control)
 - [Code Style](#code-style)
 - [Development Workflow](#development-workflow)
@@ -18,6 +19,7 @@ This document outlines the development standards and best practices followed at 
 ### Git Configuration
 
 #### Branch Structure
+
 - **Main Branch**: `main`
   - Production-ready code
   - Protected branch
@@ -27,6 +29,7 @@ This document outlines the development standards and best practices followed at 
   - Testing environment
 
 #### Branch Naming Convention
+
 - Feature branches: `feature/short-description`
 - Bug fixes: `fix/issue-description`
 - Hotfixes: `hotfix/critical-fix`
@@ -35,6 +38,7 @@ This document outlines the development standards and best practices followed at 
 ### Commit Standards
 
 #### Commit Message Format
+
 ```
 <type>: <short description>
 
@@ -43,6 +47,7 @@ This document outlines the development standards and best practices followed at 
 ```
 
 #### Commit Types
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `docs`: Documentation changes
@@ -52,6 +57,7 @@ This document outlines the development standards and best practices followed at 
 - `chore`: Maintenance tasks
 
 #### Best Practices
+
 1. Keep commits atomic and focused
 2. Write clear, concise descriptions
 3. Reference issue numbers when applicable
@@ -60,6 +66,7 @@ This document outlines the development standards and best practices followed at 
 ## Development Workflow
 
 ### Feature Development Process
+
 1. Create feature branch from `develop`
 2. Implement changes
 3. Submit pull request
@@ -68,6 +75,7 @@ This document outlines the development standards and best practices followed at 
 ## Code Style
 
 ### General Guidelines
+
 - Write self-documenting code
 - Follow DRY (Don't Repeat Yourself) principles
 - Maintain consistent naming conventions
@@ -77,13 +85,16 @@ This document outlines the development standards and best practices followed at 
 ## Documentation
 
 ### Code Documentation
+
 - Ensure code comments are up to date
 
 ### Project Documentation
+
 - Maintain README files
 - Primarly document on umd-uroc.GitHub.io
 
 ## .editorconfig
+
 Below is our global .editorconfig. This file is derived from Google's Styleguide for their code.
 
 ```bash

@@ -17,7 +17,7 @@ Before you begin, ensure you meet the following requirements:
    sudo apt update && sudo apt install git wget curl make build-essential python3 python3-pip
    ```
 
-***
+---
 
 :::warning
 
@@ -28,16 +28,16 @@ Before you begin, ensure you meet the following requirements:
 ### Step 1: Install PX4 and ROS 2
 
 1. **Set Up PX4 Environment**:
-    1. Go to the [Install PX4](https://docs.px4.io/main/en/ros2/user_guide.html#install-px4) section.
-    2. Scroll to "Set up a PX4 development environment on Ubuntu."
-        1. Copy and paste the provided command block.
+   1. Go to the [Install PX4](https://docs.px4.io/main/en/ros2/user_guide.html#install-px4) section.
+   2. Scroll to "Set up a PX4 development environment on Ubuntu."
+      1. Copy and paste the provided command block.
 2. **Download and Install ROS 2**:
-    * Go to the [Install ROS 2](https://docs.px4.io/main/en/ros2/user_guide.html#install-px4) section.
-    * Follow steps one and two to install ROS 2 Humble. Note: This process may take several minutes.
+   - Go to the [Install ROS 2](https://docs.px4.io/main/en/ros2/user_guide.html#install-px4) section.
+   - Follow steps one and two to install ROS 2 Humble. Note: This process may take several minutes.
 
 Stop at the "Setup Micro XRCE-DDS Agent & Client" section.
 
-***
+---
 
 ### Step 2: Install MAVROS
 
@@ -53,7 +53,7 @@ wget https://raw.githubusercontent.com/mavlink/mavros/ros2/mavros/scripts/instal
 sudo sh install_geographiclib_datasets.sh
 ```
 
-***
+---
 
 ### Step 3: Clone UROC ROS Node
 
@@ -73,7 +73,7 @@ rosdep update
 rosdep install -i --from-path src --rosdistro humble -y
 ```
 
-***
+---
 
 ### Step 4: Download QGroundControl
 
@@ -100,7 +100,7 @@ Reboot your system to apply the user permission changes.
 It is advised to download the AppImage into your home directory to match the steps these directions follow
 :::
 
-***
+---
 
 ### Step 5: Enable Port Forwarding in QGroundControl
 
@@ -112,6 +112,7 @@ To enable port forwarding in QGroundControl:
    cd ~
    ./QGroundControl-x86_64.AppImage
    ```
+
 2. Follow the steps in the screenshots below to enable port forwarding:
 
 ![Step1](./img/Step1.png)
@@ -126,7 +127,7 @@ Due to a recent QGroundControl UI update, the MAVLINK forwarding configuration i
 
 You may now close QGroundControl.
 
-***
+---
 
 ### Step 6 (Option 1): Install PlotJuggler
 
@@ -140,7 +141,7 @@ I used the following command:
 sudo snap install plotjuggler
 ```
 
-***
+---
 
 ### Step 6 (Option 2): Set Up Foxglove
 
@@ -171,7 +172,7 @@ I ran this command:
 sudo apt install ros-humble-foxglove-bridge
 ```
 
-***
+---
 
 ### Step 7: Test the Setup
 
@@ -197,7 +198,7 @@ cd ~
 ros2 run mavros mavros_node --ros-args -p fcu_url:=udp://:14540@127.0.0.1:14557 -p target_component_id:=1 -r __ns:=/mavros
 ```
 
-***
+---
 
 #### Launch Foxglove or PlotJuggler
 
@@ -227,7 +228,7 @@ To run PlotJuggler, use this command in a fourth terminal:
 plotjuggler
 ```
 
-***
+---
 
 ### Step 8: (PlotJuggler Only):
 
@@ -239,7 +240,7 @@ To visualize live data in PlotJuggler:
 
 ![PlotJuggler Topic Selection](./img/PlotJugglerTopicSelection.png)
 
-***
+---
 
 ### Step 9 (Optional): Use Helper Script
 

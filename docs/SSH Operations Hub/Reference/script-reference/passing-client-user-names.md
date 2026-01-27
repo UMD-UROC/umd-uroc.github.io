@@ -28,6 +28,3 @@ This flag works the same that the -user flag works except it defines the seconda
 # Make default pool's users root and secondary's pool users admin
 ssh-operations-hub -primary 1 2 3 -user root -secondary 4 5 6 -suser admin
 ```
-
-
-

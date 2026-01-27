@@ -36,4 +36,4 @@ If you encounter any issues or have questions about our projects, please:
 
 ---
 
-*This documentation is built with [Docusaurus](https://docusaurus.io/).*
+_This documentation is built with [Docusaurus](https://docusaurus.io/)._

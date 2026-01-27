@@ -37,7 +37,7 @@ Specify commands to execute across multiple clients with variable substitution s
 ## Quick Reference
 
 | Flag               | Description               | Example                |
-|--------------------|---------------------------|------------------------|
+| ------------------ | ------------------------- | ---------------------- |
 | `-ip` / `-primary` | Primary client IPs        | `-ip 1 2 3`            |
 | `-secondary`       | Secondary client IPs      | `-secondary 10 11`     |
 | `-ip-prefix`       | Custom IP prefix          | `-ip-prefix 192.168.1` |

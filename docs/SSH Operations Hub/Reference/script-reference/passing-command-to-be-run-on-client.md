@@ -20,9 +20,9 @@ ssh-operations-hub -ip 1 2 3 -user root -cmd "echo Client \$CLIENT_NUM ready"
 
 ## Known Issues
 
-* Interactive commands (like `htop`, `vim`, etc.) are not supported
-* Commands requiring user input will cause the script to hang
-* For commands that require confirmation (like `apt upgrade`), use the `-y` flag when available to remove the
+- Interactive commands (like `htop`, `vim`, etc.) are not supported
+- Commands requiring user input will cause the script to hang
+- For commands that require confirmation (like `apt upgrade`), use the `-y` flag when available to remove the
   requirement for user input:
 
   ```bash

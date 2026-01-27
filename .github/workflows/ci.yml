@@ -1,22 +1,27 @@
-name: CI - Build Test (Develop)
+name: CI
 
 on:
-  push:
-    branches: [develop]
+  pull_request:
+    branches: [main, master]
+
+permissions:
+  contents: read
 
 jobs:
-  test-deploy:
-    name: Test deployment
+  test:
+    name: Lint, Typecheck, Build
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Bun
         uses: oven-sh/setup-bun@v2
+        with:
+          cache: true
 
-      - name: Cache build artifacts
+      - name: Cache Docusaurus build artifacts
         uses: actions/cache@v4
         with:
           path: |
@@ -29,5 +34,14 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Test build website
+      - name: Check formatting
+        run: bun run format:check
+
+      - name: Lint
+        run: bun run lint
+
+      - name: Typecheck
+        run: bun run typecheck
+
+      - name: Build
         run: bun run build

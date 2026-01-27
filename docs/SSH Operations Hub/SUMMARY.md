@@ -9,24 +9,24 @@ This documentation is organized to take you from beginner to expert user with SS
 
 ## Getting Started
 
-* [🏠 Overview](README.md) - Introduction and key features
-* [🚀 Quick Start](quick-start.md) - Installation and your first command
+- [🏠 Overview](README.md) - Introduction and key features
+- [🚀 Quick Start](quick-start.md) - Installation and your first command
 
 ## Reference Documentation
 
 ### Script Reference
 
-* [📖 Script Reference Overview](Reference/script-reference/README.md) - Complete flag documentation with examples
-    * [🌐 IP Address Management](Reference/script-reference/passing-client-ip-addresses.md) - Primary and secondary IP
-      pools
-    * [🔧 IP Prefix Configuration](Reference/script-reference/passing-client-ip-prefix.md) - Custom network ranges
-    * [👤 User Authentication](Reference/script-reference/passing-client-user-names.md) - SSH username configuration
-    * [⚡ Command Execution](Reference/script-reference/passing-command-to-be-run-on-client.md) - Running commands with
-      variables
+- [📖 Script Reference Overview](Reference/script-reference/README.md) - Complete flag documentation with examples
+  - [🌐 IP Address Management](Reference/script-reference/passing-client-ip-addresses.md) - Primary and secondary IP
+    pools
+  - [🔧 IP Prefix Configuration](Reference/script-reference/passing-client-ip-prefix.md) - Custom network ranges
+  - [👤 User Authentication](Reference/script-reference/passing-client-user-names.md) - SSH username configuration
+  - [⚡ Command Execution](Reference/script-reference/passing-command-to-be-run-on-client.md) - Running commands with
+    variables
 
 ### Configuration
 
-* [⚙️ Configuration Options](Reference/configuration.md) - Customize default settings
+- [⚙️ Configuration Options](Reference/configuration.md) - Customize default settings
 
 ## Learning Path
 

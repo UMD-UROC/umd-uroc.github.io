@@ -5,7 +5,7 @@ description: Configuration options available in defaults.conf
 
 # Configuration
 
-## IP\_PREFIX
+## IP_PREFIX
 
 Sets the default IP prefix used when no -ip-prefix flag is provided.
 
@@ -17,7 +17,7 @@ IP_PREFIX="10.200.142"
 IP_PREFIX="192.168.1"
 ```
 
-## ALLOWED\_IPS
+## ALLOWED_IPS
 
 Defines valid IP octets that can be used with the script. Supports individual numbers and ranges.
 
