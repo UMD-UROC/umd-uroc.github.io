@@ -21,3 +21,5 @@ yarn-error.log*
 
 # IDEA
 /.idea
+
+.direnv
