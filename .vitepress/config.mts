@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "umd-uroc.github.io",
-  description: "A VitePress Site",
+  description: "#FEARLESSFLIGHT",
 
   head: [
     [
@@ -33,7 +33,10 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      {
+        icon: "github",
+        link: "https://github.com/UMD-UROC/umd-uroc.github.io",
+      },
     ],
 
     logo: "https://uroc.umd.edu/sites/uroc.umd.edu/themes/engrcenter_sub_uas/images/logo-uroc.svg",
