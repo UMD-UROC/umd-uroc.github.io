@@ -41,5 +41,13 @@ export default defineConfig({
 
     logo: "https://uroc.umd.edu/sites/uroc.umd.edu/themes/engrcenter_sub_uas/images/logo-uroc.svg",
     siteTitle: false,
+
+    search: {
+      provider: "local",
+    },
+
+    editLink: {
+      pattern: "https://github.com/UMD-UROC/umd-uroc.github.io/edit/main/:path",
+    },
   },
 });
