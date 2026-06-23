@@ -1,25 +1,31 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "umd-uroc.github.io"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: UMD UROC FOSS
+  text: "#FEARLESSFLIGHT"
+  tagline: Documentation for University of Maryland Unmanned Research Operations Center projects and tools.
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: View Projects
+      link: /umd-uroc-projects
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: UROC Website
+      link: https://uroc.umd.edu
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: MAVInsight
+    details: Live MAVLink data visualization setup with PX4, ROS 2, MAVROS, PlotJuggler, and Foxglove.
+    link: /MAVInsight
+    linkText: Open MAVInsight docs
+  - title: SSH Operations Hub
+    details: Run commands across multiple SSH clients with IP validation, client groups, and command substitution.
+    link: /SSH%20Operations%20Hub
+    linkText: Open SSH Operations Hub docs
+  - title: Development Standards
+    details: Shared development practices for version control, workflow, code style, and documentation.
+    link: /development-standards
+    linkText: Read standards
 ---
 
+<section class="uroc-photo" aria-label="UMD UROC aircraft operations"></section>
