@@ -113,10 +113,5 @@ export default defineConfig({
     editLink: {
       pattern: "https://github.com/UMD-UROC/umd-uroc.github.io/edit/main/:path",
     },
-
-    footer: {
-      message: "Built with VitePress.",
-      copyright: `Copyright © ${new Date().getFullYear()} UMD UROC.`,
-    },
   },
 });
