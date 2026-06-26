@@ -2,16 +2,19 @@
   "name": "umd-uroc.github.io",
   "version": "1.0.0",
   "private": true,
-  "devDependencies": {
-    "vitepress": "2.0.0-alpha.17"
-  },
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "prepare": "vp config"
+  },
+  "devDependencies": {
+    "oxc-minify": "^0.137.0",
+    "vite-plus": "catalog:",
+    "vitepress": "2.0.0-alpha.17"
   },
   "packageManager": "pnpm@10.14.0"
 }

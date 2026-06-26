@@ -23,7 +23,7 @@
 }
 
 .uroc-photo {
-  width: min(1152px, calc(100% - 48px));
+  width: min(1152px, 100%);
   min-height: 320px;
   margin: 32px auto 0;
   border-radius: 8px;

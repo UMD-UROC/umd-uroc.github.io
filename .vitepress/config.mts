@@ -6,15 +6,13 @@ export default defineConfig({
   title: "UMD UROC FOSS",
   description: "#FEARLESSFLIGHT",
   appearance: false,
+  srcExclude: ["AGENTS.md"],
 
   vite: {
     build: {
       rollupOptions: {
         onwarn(warning, warn) {
-          if (
-            warning.code === "INVALID_ANNOTATION" &&
-            warning.message.includes("@vueuse/core")
-          ) {
+          if (warning.code === "INVALID_ANNOTATION" && warning.message.includes("@vueuse/core")) {
             return;
           }
 
