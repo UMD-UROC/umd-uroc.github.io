@@ -1,0 +1,74 @@
+:root {
+  --vp-c-brand-1: #e21833;
+  --vp-c-brand-2: #ffd200;
+  --vp-c-brand-3: #a41221;
+  --vp-home-hero-name-color: #e21833;
+  --vp-button-brand-bg: #e21833;
+  --vp-button-brand-border: #e21833;
+  --vp-button-brand-hover-bg: #a41221;
+  --vp-button-brand-hover-border: #a41221;
+}
+
+.VPHome {
+  padding-bottom: 0;
+}
+
+.VPHomeHero .image-src {
+  max-height: 190px;
+}
+
+.VPNavBarTitle .logo {
+  width: auto;
+  height: 24px;
+}
+
+.uroc-photo {
+  width: min(1152px, 100%);
+  min-height: 320px;
+  margin: 32px auto 0;
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgb(0 0 0 / 48%), rgb(0 0 0 / 8%)),
+    url("https://uroc.umd.edu/sites/uroc.umd.edu/files/DSC_0667_0.jpg") center / cover;
+}
+
+.custom-block {
+  border: 1px solid transparent;
+  border-left-width: 5px;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+
+.custom-block-title {
+  margin-bottom: 8px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.custom-block p {
+  line-height: 1.7;
+}
+
+.custom-block.info {
+  border-left-color: #3b82f6;
+}
+
+.custom-block.tip {
+  border-left-color: #168a55;
+}
+
+.custom-block.warning {
+  border-left-color: #d97706;
+}
+
+.custom-block.danger {
+  border-left-color: #dc2626;
+}
+
+@media (max-width: 640px) {
+  .uroc-photo {
+    min-height: 220px;
+  }
+}
