@@ -12,7 +12,7 @@
     "prepare": "vp config"
   },
   "devDependencies": {
-    "oxc-minify": "^0.138.0",
+    "oxc-minify": "^0.139.0",
     "vite-plus": "catalog:",
     "vitepress": "2.0.0-alpha.17",
     "vue": "^3.5.39"
