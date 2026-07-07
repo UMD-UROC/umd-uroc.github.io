@@ -4,7 +4,7 @@ allowBuilds:
 catalog:
   vite: npm:@voidzero-dev/vite-plus-core@latest
   vite-plus: ^0.2.2
-  vitest: 4.1.9
+  vitest: 4.1.10
 
 onlyBuiltDependencies:
   - esbuild
