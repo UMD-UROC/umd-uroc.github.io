@@ -3,7 +3,7 @@ allowBuilds:
 
 catalog:
   vite: npm:@voidzero-dev/vite-plus-core@latest
-  vite-plus: ^0.2.3
+  vite-plus: ^0.2.4
   vitest: 4.1.10
 
 onlyBuiltDependencies:
