@@ -1,21 +1,25 @@
 {
-  "name": "umd-uroc.github.io",
-  "version": "1.0.0",
+  "name": "umd-uroc-site",
+  "version": "2.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview",
-    "prepare": "vp config"
+    "dev": "bunx --bun vp dev",
+    "build": "bun node_modules/vite-plus/bin/vp build",
+    "preview": "bun node_modules/vite-plus/bin/vp preview",
+    "check": "bun node_modules/vite-plus/bin/vp check",
+    "test": "bun node_modules/vite-plus/bin/vp test --run",
+    "prepare": "bun node_modules/vite-plus/bin/vp config --no-hooks --no-agent && git config core.hooksPath .vite-hooks"
+  },
+  "dependencies": {
+    "markdown-it": "^15.0.2"
   },
   "devDependencies": {
-    "oxc-minify": "^0.141.0",
-    "vite-plus": "catalog:",
-    "vitepress": "2.0.0-alpha.18",
-    "vue": "^3.5.40"
+    "@types/markdown-it": "^14.2.0",
+    "@types/node": "^26.6.2",
+    "typescript": "^7.0.2",
+    "vite-plus": "^0.2.6"
   },
-  "packageManager": "pnpm@10.14.0"
+  "packageManager": "bun@1.4.2",
+  "portless": "umd-uroc"
 }

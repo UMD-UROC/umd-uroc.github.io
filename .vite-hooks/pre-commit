@@ -1,1 +1,1 @@
-vp staged
+bun node_modules/vite-plus/bin/vp staged

@@ -1,53 +1,64 @@
-name: Deploy VitePress site to Pages
+name: Check and deploy Vite+ site
 
 on:
   push:
     branches: [main]
-
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          fetch-depth: 0
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v6
-      - name: Setup Node
-        uses: actions/setup-node@v7
+          bun-version: 1.4.2
+      - name: Set up Vite+
+        uses: voidzero-dev/setup-vp@v1
         with:
-          node-version: 24
-          cache: pnpm
-      - name: Setup Pages
-        uses: actions/configure-pages@v6
+          cache: true
+          cache-dependency-path: bun.lock
+          run-install: false
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-      - name: Build with VitePress
-        run: pnpm run build
-      - name: Upload artifact
+        run: bun ci
+      - name: Format, lint, and type check
+        run: bun run check
+      - name: Test
+        run: bun run test
+      - name: Build
+        run: bun run build
+      - name: Configure Pages
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/configure-pages@v6
+      - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5
         with:
-          path: .vitepress/dist
+          path: dist
 
   deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
-    name: Deploy
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

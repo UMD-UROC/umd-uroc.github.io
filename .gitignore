@@ -13,10 +13,8 @@ cache
 temp
 examples-temp
 node_modules
-pnpm-global
-.pnpm-store
 TODOs.md
 *.timestamp-*.mjs
 .claude
-.docusaurus
 build
+.vitest/
